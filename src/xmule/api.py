@@ -14,11 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from . import backends
 
-def test_import():
-    import xmule
+def open_dataset(path):
+    return backends.XMuleDataStore(path)
 
-
-def test_open_dataset():
-    import xmule
-    ds = xmule.open_dataset('iris-test-data/test_data/FF/n48_multi_field')

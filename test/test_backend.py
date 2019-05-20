@@ -14,11 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from xmule.backends import XMuleDataStore
 
-def test_import():
-    import xmule
+def test_get_variables():
+    ds = XMuleDataStore('iris-test-data/test_data/FF/n48_multi_field')
 
+    v = ds.get_variables()
 
-def test_open_dataset():
-    import xmule
-    ds = xmule.open_dataset('iris-test-data/test_data/FF/n48_multi_field')
+    print(v)
+    assert v is not None
+
