@@ -1,0 +1,33 @@
+package:
+    name: xmule
+    version: {{ GIT_DESCRIBE_TAG }}
+
+build:
+    number: {{ GIT_DESCRIBE_NUMBER }}
+
+source:
+    git_url: ../
+
+build:
+    noarch: python
+    script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed"
+
+requirements:
+    host:
+        - python
+        - pip
+    run:
+        - python
+        - xarray
+        - mule
+
+test:
+    source_files:
+        - setup.cfg
+        - test
+    requires:
+        - pytest
+    script: py.test
+
+about:
+    home: https://github.com/ScottWales/xmule

@@ -19,6 +19,6 @@ def test_import():
     import xmule
 
 
-def test_open_dataset():
+def test_open_dataset(iris_test_data):
     import xmule
-    ds = xmule.open_dataset('iris-test-data/test_data/FF/n48_multi_field')
+    ds = xmule.open_dataset(iris_test_data / 'FF/n48_multi_field')

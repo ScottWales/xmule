@@ -23,7 +23,7 @@ jobs:
                 name: Build
                 command: |
                     source ~/miniconda/bin/activate
-                    conda build . -c conda-forge -c coecms
+                    conda build conda -c conda-forge -c coecms
 
 workflows:
     version: 2

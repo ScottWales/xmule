@@ -14,3 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import pytest
+import os
+from pathlib import Path
+
+@pytest.fixture
+def iris_test_data():
+    src_path = Path(os.environ.get('RECIPE_DIR','.'))
+    return src_path / 'iris-test-data' / 'test_data'
+

@@ -16,8 +16,8 @@
 
 from xmule.backends import XMuleDataStore
 
-def test_get_variables():
-    ds = XMuleDataStore('iris-test-data/test_data/FF/n48_multi_field')
+def test_get_variables(iris_test_data):
+    ds = XMuleDataStore(iris_test_data / 'FF/n48_multi_field')
 
     v = ds.get_variables()
 
